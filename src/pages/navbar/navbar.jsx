@@ -123,17 +123,8 @@ export default function Navbar() {
               </Link>
             ))}
 
-          //   {token &&
-          //     adminMenu.map((item, index) => (
-          //       <Link
-          //         key={index}
-          //         to={item.link}
-          //         className="text-white hover:text-[#F05A28] duration-300"
-          //       >
-          //         {item.title}
-          //       </Link>
-          //     ))}
-          // </nav>
+          
+          </nav>
 
           {/* Right */}
           <div className="flex items-center gap-3">
