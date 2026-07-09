@@ -1,0 +1,63 @@
+{
+  "nav": {
+    "hajj": "Hajj Programs",
+    "umrah": "Umrah Programs",
+    "flights": "Flight Booking",
+    "about": "About Us",
+    "chairman": "Chairman Message",
+    "media": "Media Center",
+    "allPrograms": "All Programs",
+    "book": "Book Now",
+    "hotline": "Hotline",
+    "whatsapp": "Contact via WhatsApp",
+    "adminpanel": "adminpanel",
+    "addTicket": "add ticket",
+    "MyTickets":"My tickets",
+    "logout": "Logout"
+
+
+  },
+  "home": {
+    "titleCompany": "Mariano Travel",
+    "subtitle": "We Know What You Deserve",
+    "vip": "VIP Umrah",
+    "umrah": "Umrah Programs",
+    "hajj": "Hajj Programs",
+    "bookNow": "Book Your Trip Now"
+  },
+   "chairman": {
+    "title": "Chairman's Message",
+    "p1": "At Mariano Travel, our mission is to provide exceptional travel experiences for Hajj and Umrah pilgrims with the highest standards of quality, comfort, and care.",
+    "p2": "We believe that every spiritual journey deserves thoughtful planning and dedicated service. That is why we continuously strive to offer premium services, reliable arrangements, and personalized support to ensure a seamless experience for our clients.",
+    "p3": "Our commitment is built on trust, integrity, and excellence. We are honored to be part of your sacred journey.",
+    "name": "Mr. [Ashraf Khafaga ]",
+    "position": "Chairman of the Board"
+  },
+   "about": {
+    "title": "About Us",
+    "subtitle": "Your Trusted Umrah & Hajj Programs Since 2015",
+    "hero_title": "Your Spiritual Journey Starts With Us",
+    "hero_desc": "Best Umrah & Hajj packages with competitive prices & premium services",
+    "stats": {
+      "clients": "Happy Clients",
+      "programs": "Booked Programs",
+      "years": "Years Experience",
+      "awards": "Awards"
+    },
+    "mission_title": "Our Vision",
+    "mission_desc": "Providing safe & comfortable Hajj/Umrah experience combining spirituality & luxury",
+    "values_title": "Our Values",
+    "values": [
+      "Trust & Safety",
+      "Premium Quality",
+      "Best Prices",
+      "24/7 Support"
+    ],
+    "team_title": "Our Team",
+    "team_desc": "Team of experts with 10+ years experience in religious trips organization",
+    "cta_title": "Ready for Your Journey?",
+    "cta_desc": "Book now & enjoy our premium services",
+    "contact": "Contact Us"
+  }
+
+}

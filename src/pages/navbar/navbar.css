@@ -1,0 +1,169 @@
+/* ===========================
+   MENU
+=========================== */
+
+.menubar {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+/* ===========================
+   MENU ITEM
+=========================== */
+
+.menu-item {
+  display: grid;
+  grid-template-columns: 32px 1fr;
+  align-items: center;
+  gap: 14px;
+
+  padding: 16px 24px;
+  cursor: pointer;
+
+  font-size: 16px;
+  transition: all .3s ease;
+}
+
+.menu-item:hover {
+  background: rgba(255,255,255,.08);
+}
+
+.menu-item .icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 32px;
+  font-size: 26px;
+  color: #d4b57a;
+}
+
+.menu-item span:last-child {
+  text-align: right;
+  white-space: nowrap;
+  font-size: 22px;
+  font-weight: 500;
+}
+
+/* ===========================
+   HAMBURGER
+=========================== */
+
+.menu-btn {
+  width: 34px;
+  height: 24px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  cursor: pointer;
+  transition: .3s;
+}
+
+.menu-btn span {
+  width: 100%;
+  height: 3px;
+
+  background: #d4b57a;
+  border-radius: 10px;
+
+  transition: .3s;
+}
+
+.menu-btn:hover {
+  transform: scale(1.05);
+}
+
+.menu-btn:active {
+  transform: scale(.95);
+}
+
+.menu-btn:focus {
+  outline: none;
+}
+
+/* ===========================
+   TABLET
+=========================== */
+
+@media (max-width: 992px) {
+
+  .menu-item {
+    padding: 14px 18px;
+    gap: 12px;
+  }
+
+  .menu-item .icon {
+    font-size: 22px;
+  }
+
+  .menu-item span:last-child {
+    font-size: 18px;
+  }
+}
+
+/* ===========================
+   MOBILE
+=========================== */
+
+@media (max-width:768px){
+
+  .menubar{
+    padding-top:10px;
+  }
+
+  .menu-item{
+    grid-template-columns:26px 1fr;
+    gap:10px;
+    padding:14px 16px;
+  }
+
+  .menu-item .icon{
+    width:26px;
+    font-size:20px;
+  }
+
+  .menu-item span:last-child{
+    font-size:16px;
+  }
+
+  .menu-btn{
+    width:30px;
+    height:20px;
+  }
+
+  .menu-btn span{
+    height:2.5px;
+  }
+
+}
+
+/* ===========================
+   SMALL MOBILE
+=========================== */
+
+@media (max-width:480px){
+
+  .menu-item{
+    padding:12px;
+    gap:8px;
+  }
+
+  .menu-item .icon{
+    font-size:18px;
+  }
+
+  .menu-item span:last-child{
+    font-size:14px;
+  }
+
+  .menu-btn{
+    width:26px;
+    height:18px;
+  }
+
+}
