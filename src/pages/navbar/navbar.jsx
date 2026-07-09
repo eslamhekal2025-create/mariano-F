@@ -56,25 +56,28 @@ export default function Navbar() {
     { icon: FaInfoCircle, title: t("nav.about"), link: "/AboutUs" },
     { icon: FaUserTie, title: t("nav.chairman"), link: "/ChairmanSection" },
     { icon: FaNewspaper, title: t("nav.allPrograms"), link: "/AllPrograms" },
+    { icon: FaUserShield, title: t("nav.adminpanel"), link: "/admin-panel" },
+    { icon: FaUserShield, title: t("nav.MyTickets"), link: "/MyTickets" },
+    { icon: FaUserShield, title: t("nav.addTicket"), link: "/AddTicket" }
   ];
 
-  const adminMenu = [
-    {
-      icon: FaUserShield,
-      title: t("nav.adminpanel"),
-      link: "/admin-panel",
-    },
-    {
-      icon: FaUserShield,
-      title: t("nav.MyTickets"),
-      link: "/MyTickets",
-    },
-    {
-      icon: FaUserShield,
-      title: t("nav.addTicket"),
-      link: "/AddTicket",
-    },
-  ];
+  // const adminMenu = [
+  //   {
+  //     icon: FaUserShield,
+  //     title: t("nav.adminpanel"),
+  //     link: "/admin-panel",
+  //   },
+  //   {
+  //     icon: FaUserShield,
+  //     title: t("nav.MyTickets"),
+  //     link: "/MyTickets",
+  //   },
+  //   {
+  //     icon: FaUserShield,
+  //     title: t("nav.addTicket"),
+  //     link: "/AddTicket",
+  //   },
+  // ];
 
   return (
     <>
@@ -120,17 +123,17 @@ export default function Navbar() {
               </Link>
             ))}
 
-            {token &&
-              adminMenu.map((item, index) => (
-                <Link
-                  key={index}
-                  to={item.link}
-                  className="text-white hover:text-[#F05A28] duration-300"
-                >
-                  {item.title}
-                </Link>
-              ))}
-          </nav>
+          //   {token &&
+          //     adminMenu.map((item, index) => (
+          //       <Link
+          //         key={index}
+          //         to={item.link}
+          //         className="text-white hover:text-[#F05A28] duration-300"
+          //       >
+          //         {item.title}
+          //       </Link>
+          //     ))}
+          // </nav>
 
           {/* Right */}
           <div className="flex items-center gap-3">
