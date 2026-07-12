@@ -3,7 +3,7 @@ import { Outlet} from 'react-router-dom'
 import { useDispatch } from 'react-redux';
 import { setUserRedux } from '../../Redux/user.js';
 import Navbar from '../navbar/navbar.jsx';
-
+import "./layout.css"
 export default function Layout() {
   const dispatch = useDispatch();
 
@@ -19,7 +19,12 @@ export default function Layout() {
  
     <main className="flex-grow">
     <Navbar/>
+
+    <div className="main-pages">
+    
       <Outlet />
+    </div>
+    
     </main>
     
  </div>

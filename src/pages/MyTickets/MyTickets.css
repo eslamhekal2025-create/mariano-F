@@ -72,12 +72,12 @@ tbody tr:hover{
   height: 38px;
   border: none;
   border-radius: 8px;
-  background: #ffebee;
   color: #d90429;
   font-size: 18px;
   font-weight: bold;
   cursor: pointer;
   transition: .3s;
+  
 }
 
 .delete-ticket:hover{

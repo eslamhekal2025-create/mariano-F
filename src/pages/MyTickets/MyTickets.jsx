@@ -3,7 +3,7 @@ import { getMyTickets } from "../../services/tickets.js";
 import "./MyTickets.css";
 import axios from "axios";
 import { toast } from "react-toastify";
-
+import { FaTrash } from "react-icons/fa";
 export default function MyTickets() {
   const [tickets, setTickets] = useState([]);
   const API = import.meta.env.VITE_API_URL;
@@ -101,11 +101,12 @@ export default function MyTickets() {
 <td>{ticket.profit?.toLocaleString()} EGP</td>
 <td>{ticket.commission?.toLocaleString()} EGP</td>
                 <td>
-{ticket.user===localStorage.getItem("userId")?<button
+{ticket.user===localStorage.getItem("userId")?
+  <button
   onClick={() => deleteTicket(ticket._id)}
   className="delete-ticket"
 >
-  X
+  <FaTrash />
 </button>        :null} 
 
 </td>
