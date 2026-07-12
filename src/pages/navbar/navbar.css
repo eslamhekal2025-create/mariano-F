@@ -1,169 +1,564 @@
-/* ===========================
-   MENU
-=========================== */
+/* =========================
+   NAVBAR
+========================= */
 
-.menubar {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: stretch;
-}
+.navbar {
 
-/* ===========================
-   MENU ITEM
-=========================== */
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:999;
 
-.menu-item {
-  display: grid;
-  grid-template-columns: 32px 1fr;
-  align-items: center;
-  gap: 14px;
+    background:#1f2c33;
 
-  padding: 16px 24px;
-  cursor: pointer;
+    transition:.3s ease;
 
-  font-size: 16px;
-  transition: all .3s ease;
-}
-
-.menu-item:hover {
-  background: rgba(255,255,255,.08);
-}
-
-.menu-item .icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  width: 32px;
-  font-size: 26px;
-  color: #d4b57a;
-}
-
-.menu-item span:last-child {
-  text-align: right;
-  white-space: nowrap;
-  font-size: 22px;
-  font-weight: 500;
-}
-
-/* ===========================
-   HAMBURGER
-=========================== */
-
-.menu-btn {
-  width: 34px;
-  height: 24px;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-
-  cursor: pointer;
-  transition: .3s;
-}
-
-.menu-btn span {
-  width: 100%;
-  height: 3px;
-
-  background: #d4b57a;
-  border-radius: 10px;
-
-  transition: .3s;
-}
-
-.menu-btn:hover {
-  transform: scale(1.05);
-}
-
-.menu-btn:active {
-  transform: scale(.95);
-}
-
-.menu-btn:focus {
-  outline: none;
-}
-
-/* ===========================
-   TABLET
-=========================== */
-
-@media (max-width: 992px) {
-
-  .menu-item {
-    padding: 14px 18px;
-    gap: 12px;
-  }
-
-  .menu-item .icon {
-    font-size: 22px;
-  }
-
-  .menu-item span:last-child {
-    font-size: 18px;
-  }
-}
-
-/* ===========================
-   MOBILE
-=========================== */
-
-@media (max-width:768px){
-
-  .menubar{
-    padding-top:10px;
-  }
-
-  .menu-item{
-    grid-template-columns:26px 1fr;
-    gap:10px;
-    padding:14px 16px;
-  }
-
-  .menu-item .icon{
-    width:26px;
-    font-size:20px;
-  }
-
-  .menu-item span:last-child{
-    font-size:16px;
-  }
-
-  .menu-btn{
-    width:30px;
-    height:20px;
-  }
-
-  .menu-btn span{
-    height:2.5px;
-  }
+    border-bottom:1px solid rgba(255,255,255,.1);
 
 }
 
-/* ===========================
-   SMALL MOBILE
-=========================== */
 
-@media (max-width:480px){
+.navbar.scrolled{
 
-  .menu-item{
-    padding:12px;
+    background:rgba(31,44,51,.95);
+
+    backdrop-filter:blur(10px);
+
+    box-shadow:0 5px 20px rgba(0,0,0,.25);
+
+}
+
+
+
+
+/* =========================
+   CONTAINER
+========================= */
+
+
+.nav-container{
+
+    width:90%;
+    height:80px;
+
+    margin:auto;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+
+
+/* =========================
+   LEFT SIDE
+========================= */
+
+
+.nav-left{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:25px;
+
+}
+
+
+
+.hotline{
+
+    display:flex;
+
+    align-items:center;
+
     gap:8px;
-  }
 
-  .menu-item .icon{
+    color:white;
+
+    font-size:15px;
+
+}
+
+
+.hotline svg{
+
+    color:#F05A28;
+
     font-size:18px;
-  }
 
-  .menu-item span:last-child{
+}
+
+
+.hotline b{
+
+    color:#F05A28;
+
+}
+
+
+
+/* =========================
+   DESKTOP MENU
+========================= */
+
+
+.desktop-menu{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:25px;
+
+}
+
+
+
+.desktop-menu a{
+
+    color:white;
+
+    text-decoration:none;
+
+    font-size:15px;
+
+    transition:.3s;
+
+    white-space:nowrap;
+
+}
+
+
+.desktop-menu a:hover{
+
+    color:#F05A28;
+
+}
+
+
+
+
+/* =========================
+   RIGHT SIDE
+========================= */
+
+
+.nav-right{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+}
+
+
+
+.nav-right img{
+
+    width:48px;
+
+    height:48px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    border:2px solid #F05A28;
+
+}
+
+
+
+
+.logout{
+
+    background:#dc2626;
+
+    color:white;
+
+    border:none;
+
+    padding:9px 16px;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+
+.logout:hover{
+
+    background:#b91c1c;
+
+}
+
+
+
+
+.nav-right select{
+
+    background:#1f2c33;
+
+    color:white;
+
+    border:1px solid #777;
+
+    padding:7px 10px;
+
+    border-radius:6px;
+
+    outline:none;
+
+}
+
+
+
+
+/* =========================
+   MOBILE BUTTON
+========================= */
+
+
+.mobile-btn{
+
+    display:none;
+
+    background:none;
+
+    border:none;
+
+    color:#F05A28;
+
+    font-size:25px;
+
+    cursor:pointer;
+
+}
+
+
+
+/* =========================
+   MOBILE MENU
+========================= */
+
+
+.mobile-menu{
+
+    position:fixed;
+
+    top:80px;
+
+    left:0;
+
+    width:100%;
+
+    height:calc(100vh - 80px);
+
+    background:#1f2c33;
+
+    z-index:998;
+
+    overflow-y:auto;
+
+
+    animation:slideDown .3s ease;
+
+}
+
+
+
+.mobile-menu a{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    padding:18px 25px;
+
+    color:white;
+
+    text-decoration:none;
+
+    border-bottom:1px solid rgba(255,255,255,.1);
+
+    font-size:16px;
+
+    transition:.3s;
+
+}
+
+
+
+.mobile-menu a svg{
+
+    color:#F05A28;
+
+    font-size:20px;
+
+}
+
+
+
+.mobile-menu a:hover{
+
+    background:#F05A28;
+
+}
+
+
+
+
+@keyframes slideDown{
+
+
+from{
+
+    opacity:0;
+
+    transform:translateY(-20px);
+
+}
+
+
+to{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+
+}
+
+
+
+
+
+/* =========================
+   TABLET
+========================= */
+
+
+@media(max-width:1200px){
+
+
+.desktop-menu{
+
+    gap:15px;
+
+}
+
+
+.desktop-menu a{
+
     font-size:14px;
-  }
 
-  .menu-btn{
-    width:26px;
-    height:18px;
-  }
+}
+
+
+.nav-container{
+
+    width:95%;
+
+}
+
+
+}
+
+
+
+
+
+
+
+/* =========================
+   MOBILE
+========================= */
+
+
+@media(max-width:992px){
+
+
+
+.desktop-menu{
+
+    display:none;
+
+}
+
+
+
+.mobile-btn{
+
+    display:block;
+
+}
+
+
+
+.hotline{
+
+    display:none;
+
+}
+
+
+
+.nav-container{
+
+    height:70px;
+
+}
+
+
+.mobile-menu{
+
+    top:70px;
+
+    height:calc(100vh - 70px);
+
+}
+
+
+
+.nav-right img{
+
+    width:42px;
+
+    height:42px;
+
+}
+
+
+
+.logout{
+
+    padding:7px 12px;
+
+    font-size:13px;
+
+}
+
+.login-btn{
+     padding:7px 12px;
+text-transform: capitalize;
+background-color: rgba(0, 128, 0, 0.658);
+color: white;
+    font-size:13px;
+}
+
+
+
+}
+
+
+
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+
+@media(max-width:480px){
+
+
+
+.nav-container{
+
+    width:94%;
+
+}
+
+
+.nav-right{
+
+    gap:8px;
+
+}
+
+
+.nav-right select{
+
+    padding:5px;
+
+    font-size:12px;
+
+}
+
+
+
+.nav-right img{
+
+    width:38px;
+
+    height:38px;
+
+}
+
+
+
+.logout{
+
+    padding:6px 8px;
+
+    font-size:12px;
+
+}
+
+
+
+.mobile-menu a{
+
+    padding:15px 18px;
+
+    font-size:15px;
+
+}
+
+
+
+}
+
+
+
+
+
+/* =========================
+   RTL SUPPORT
+========================= */
+
+
+[dir="rtl"] .mobile-menu a{
+
+    flex-direction:row-reverse;
+
+}
+
+
+[dir="rtl"] .nav-container{
+
+    direction:rtl;
+
+}
+
+
+[dir="ltr"] .nav-container{
+
+    direction:ltr;
 
 }

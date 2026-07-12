@@ -1,5 +1,4 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { Toaster } from 'react-hot-toast';
 
 import { ToastContainer } from "react-toastify";
 import {Provider} from 'react-redux';
@@ -59,7 +58,7 @@ export default function App() {
 <div className="xxl-[7vh]">
    <Provider store={store}>
       <ProgrammProvider>  {/* ✅ يلف كل حاجة */}
-        <Toaster />
+        <ToastContainer />
         <RouterProvider router={routers} />
       </ProgrammProvider>
     </Provider>

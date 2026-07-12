@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./AddTickets.css";
 import { addTicket } from "../../services/tickets";
+import { toast } from "react-toastify";
 
 export default function AddTicket() {
   const initialTicket = {
@@ -39,7 +40,7 @@ export default function AddTicket() {
     try {
       await addTicket(ticket);
 
-      alert("Ticket Added Successfully");
+      toast.success("Ticket Added Successfully");
 
       setTicket(initialTicket);
 

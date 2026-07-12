@@ -51,6 +51,7 @@ export default function MyTickets() {
         <table>
           <thead>
             <tr>
+              <th>Created By</th>
               <th>PNR</th>
               <th>Customer</th>
               <th>Type</th>
@@ -75,6 +76,7 @@ export default function MyTickets() {
           <tbody>
             {tickets.map((ticket) => (
               <tr key={ticket._id}>
+                <td className="createdBy">{ticket.user.name}</td>
                 <td className="pnr">{ticket.pnr}</td>
 
                 <td>{ticket.customerName}</td>
@@ -101,7 +103,7 @@ export default function MyTickets() {
 <td>{ticket.profit?.toLocaleString()} EGP</td>
 <td>{ticket.commission?.toLocaleString()} EGP</td>
                 <td>
-{ticket.user===localStorage.getItem("userId")?
+{ticket.user._id===localStorage.getItem("userId")?
   <button
   onClick={() => deleteTicket(ticket._id)}
   className="delete-ticket"

@@ -67,6 +67,12 @@ tbody tr:hover{
   text-transform: uppercase;
 }
 
+.createdBy{
+  color: black;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
 .delete-ticket{
   width: 38px;
   height: 38px;

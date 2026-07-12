@@ -18,12 +18,31 @@ export default function Login() {
     e.preventDefault();
     try {
       const {data} = await axios.post(`${API}/login`, form);
-      if (data?.success) {
-        navigate("/");
-        console.log("already !!")
-        localStorage.setItem("token",data.token)
-        localStorage.setItem("userId",data.user.id)
-      }
+  if(data?.success){
+
+localStorage.setItem(
+"token",
+data.token
+);
+
+
+localStorage.setItem(
+"userId",
+data.user.id
+);
+
+
+
+window.dispatchEvent(
+new Event("login")
+);
+
+
+
+navigate("/");
+
+
+}
     } catch (error) {
       toast.error(error.response?.data?.message || "حدث خطأ ما");
     }

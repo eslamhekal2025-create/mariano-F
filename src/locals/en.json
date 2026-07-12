@@ -13,7 +13,8 @@
     "adminpanel": "adminpanel",
     "addTicket": "add ticket",
     "MyTickets":"My tickets",
-    "logout": "Logout"
+    "logout": "Logout",
+    "login": "login"
 
 
   },
