@@ -1,81 +1,184 @@
-.tickets-container{
+*{
+  box-sizing: border-box;
+}
 
-    padding:40px;
+.tickets-container{
+  width: 100%;
+  padding: 30px;
 }
 
 .tickets-container h2{
-
-    text-align:center;
-    margin-bottom:30px;
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 32px;
+  font-weight: 700;
+  color: #222;
 }
 
-.pnr{
-    text-transform: uppercase;
-    color: red;
-}
-.delete-ticket{
-    color: red;
-    border-radius: 5px;
-    border: 2px solid white;
-    transition: .3s;
-}
-.delete-ticket:hover{
-    background-color: rgba(255, 0, 0, 0.532);
-    color: white;
-}
 .table-responsive{
-
-    overflow-x:auto;
+  width: 100%;
+  overflow-x: auto;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0,0,0,.08);
 }
 
 table{
+  width: 100%;
+  min-width: 1300px;
+  border-collapse: collapse;
+}
 
-    width:100%;
-    border-collapse:collapse;
-    background:white;
+thead tr{
+  background: #0d6efd;
 }
 
 table th{
-
-    background:#0d6efd;
-    color:white;
-    padding:15px;
+  color: white;
+  padding: 16px;
+  font-size: 15px;
+  font-weight: 600;
+  white-space: nowrap;
 }
 
 table td{
-
-    padding:14px;
-    border-bottom:1px solid #ddd;
-    text-align:center;
+  padding: 15px;
+  border-bottom: 1px solid #ececec;
+  text-align: center;
+  white-space: nowrap;
+  font-size: 14px;
 }
 
-table tr:hover{
+tbody tr{
+  transition: .25s;
+}
 
-    background:#f7f7f7;
+tbody tr:nth-child(even){
+  background: #fafafa;
+}
+
+tbody tr:hover{
+  background: #eef5ff;
+}
+
+.pnr{
+  color: #e63946;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.delete-ticket{
+  width: 38px;
+  height: 38px;
+  border: none;
+  border-radius: 8px;
+  background: #ffebee;
+  color: #d90429;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.delete-ticket:hover{
+  background: #d90429;
+  color: white;
+  transform: scale(1.05);
 }
 
 .summary{
-    margin-top:25px;
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.summary h3{
+  flex: 1;
+  min-width: 250px;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 8px 18px rgba(0,0,0,.08);
+  color: #0d6efd;
+  font-size: 22px;
+}
+
+@media (max-width:992px){
+
+  .tickets-container{
     padding:20px;
-    background:#f7f7f7;
-    border-radius:10px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    font-weight:bold;
-    font-size:20px;
+  }
+
+  .tickets-container h2{
+    font-size:28px;
+  }
+
+  table{
+    min-width:1200px;
+  }
+
+  .summary h3{
+    font-size:18px;
+  }
+
 }
 
-@media(max-width:768px){
+@media (max-width:768px){
 
-.tickets-container{
+  .tickets-container{
+    padding:12px;
+  }
 
-    padding:15px;
+  .tickets-container h2{
+    font-size:24px;
+    margin-bottom:18px;
+  }
+
+  table{
+    min-width:1100px;
+  }
+
+  table th,
+  table td{
+    padding:12px;
+    font-size:13px;
+  }
+
+  .summary{
+    flex-direction: column;
+  }
+
+  .summary h3{
+    width:100%;
+    font-size:18px;
+  }
+
 }
 
-table{
+@media (max-width:480px){
 
-    min-width:700px;
-}
+  .tickets-container h2{
+    font-size:22px;
+  }
+
+  table th,
+  table td{
+    font-size:12px;
+    padding:10px;
+  }
+
+  .delete-ticket{
+    width:34px;
+    height:34px;
+    font-size:16px;
+  }
+
+  .summary h3{
+    font-size:16px;
+    padding:16px;
+  }
 
 }

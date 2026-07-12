@@ -96,14 +96,10 @@ export default function MyTickets() {
                 <td>{ticket.infants}</td>
 
                 <td>{ticket.totalPassengers}</td>
-
-                <td>{ticket.totalActualPrice}</td>
-
-                <td>{ticket.totalClientPrice}</td>
-
-                <td>{ticket.profit}</td>
-
-                <td>{ticket.commission}</td>
+<td>{ticket.totalActualPrice?.toLocaleString()} EGP</td>
+<td>{ticket.totalClientPrice?.toLocaleString()} EGP</td>
+<td>{ticket.profit?.toLocaleString()} EGP</td>
+<td>{ticket.commission?.toLocaleString()} EGP</td>
                 <td>
 {ticket.user===localStorage.getItem("userId")?<button
   onClick={() => deleteTicket(ticket._id)}
