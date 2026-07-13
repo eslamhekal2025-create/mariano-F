@@ -13,14 +13,15 @@ import { motion } from "framer-motion";
 import "./Travel.css"
 export default function FlightBooking() {
   const [form, setForm] = useState({
-    name: "",
-    phone: "",
-    from: "",
-    to: "",
-    departureDate: "",
-    returnDate: "",
-    passengers: 1,
-    class: "economy",
+  tripType: "oneWay",
+  name: "",
+  phone: "",
+  from: "",
+  to: "",
+  departureDate: "",
+  returnDate: "",
+  passengers: 1,
+  class: "economy",
   });
 
   const handleChange = (e) => {
@@ -51,8 +52,16 @@ ${form.to}
 📅 تاريخ السفر:
 ${form.departureDate}
 
-📅 تاريخ العودة:
-${form.returnDate || "لا يوجد"}
+${form.tripType === "oneWay" ? "ذهاب فقط" : "ذهاب وعودة"}
+
+📅 تاريخ السفر:
+${form.departureDate}
+
+${
+  form.tripType === "roundTrip"
+    ? `📅 تاريخ العودة:\n${form.returnDate}`
+    : ""
+}
 
 👥 عدد المسافرين:
 ${form.passengers}
@@ -169,37 +178,71 @@ ${form.class === "business" ? "بيزنس" : "اقتصادي"}
                   />
                 </div>
 
-                <div className="form-group">
-                  <label className="form-label">
-                    <FaCalendarAlt className="inline ml-2 text-orange-500" />
-                    تاريخ السفر
-                  </label>
 
-                  <input
-                    type="date"
-                    name="departureDate"
-                    required
-                    value={form.departureDate}
-                    onChange={handleChange}
-                    className="form-input"
-                  />
-                </div>
+{/* نوع الرحلة */}
+<div className="form-group full-width">
+  <label className="form-label">نوع الرحلة</label>
 
-                <div className="form-group">
-                  <label className="form-label">
-                    <FaCalendarAlt className="inline ml-2 text-orange-500" />
-                    تاريخ العودة
-                  </label>
+  <div className="trip-type">
+    <label>
+      <input
+        type="radio"
+        name="tripType"
+        value="oneWay"
+        checked={form.tripType === "oneWay"}
+        onChange={handleChange}
+      />
+      ذهاب فقط
+    </label>
 
-                  <input
-                    type="date"
-                    name="returnDate"
-                    value={form.returnDate}
-                    onChange={handleChange}
-                    className="form-input"
-                  />
-                </div>
+    <label>
+      <input
+        type="radio"
+        name="tripType"
+        value="roundTrip"
+        checked={form.tripType === "roundTrip"}
+        onChange={handleChange}
+      />
+      ذهاب وعودة
+    </label>
+  </div>
+</div>
 
+{/* تاريخ السفر */}
+<div className="form-group">
+  <label className="form-label">
+    <FaCalendarAlt className="icon" />
+    تاريخ السفر
+  </label>
+
+  <input
+    type="date"
+    name="departureDate"
+    value={form.departureDate}
+    onChange={handleChange}
+    className="form-input"
+    required
+  />
+</div>
+
+{/* تاريخ العودة */}
+{form.tripType === "roundTrip" && (
+  <div className="form-group">
+    <label className="form-label">
+      <FaCalendarAlt className="icon" />
+      تاريخ العودة
+    </label>
+
+    <input
+      type="date"
+      name="returnDate"
+      value={form.returnDate}
+      onChange={handleChange}
+      className="form-input"
+      required
+    />
+  </div>
+)}
                 <div className="form-group">
                   <label className="form-label">
                     <FaUsers className="inline ml-2 text-orange-500" />
