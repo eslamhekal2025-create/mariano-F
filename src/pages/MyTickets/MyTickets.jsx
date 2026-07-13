@@ -108,7 +108,7 @@ export default function MyTickets() {
   onClick={() => deleteTicket(ticket._id)}
   className="delete-ticket"
 >
-  <FaTrash />
+x
 </button>        :null} 
 
 </td>
