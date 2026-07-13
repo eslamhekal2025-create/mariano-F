@@ -38,6 +38,8 @@ table th{
   padding: 16px;
   font-size: 15px;
   font-weight: 600;
+    color: black;
+
   white-space: nowrap;
 }
 
@@ -47,18 +49,25 @@ table td{
   text-align: center;
   white-space: nowrap;
   font-size: 14px;
+    color: black;
+
 }
 
 tbody tr{
   transition: .25s;
+    color: black;
+
 }
 
 tbody tr:nth-child(even){
   background: #fafafa;
+  color: black;
 }
 
 tbody tr:hover{
   background: #eef5ff;
+  color: black;
+
 }
 
 .pnr{
