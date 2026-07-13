@@ -1,13 +1,13 @@
-*{
+* {
   box-sizing: border-box;
 }
 
-.tickets-container{
+.tickets-container {
   width: 100%;
   padding: 30px;
 }
 
-.tickets-container h2{
+.tickets-container h2 {
   text-align: center;
   margin-bottom: 25px;
   font-size: 32px;
@@ -15,104 +15,95 @@
   color: #222;
 }
 
-.table-responsive{
+.table-responsive {
   width: 100%;
   overflow-x: auto;
   background: #fff;
   border-radius: 14px;
-  box-shadow: 0 10px 25px rgba(0,0,0,.08);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, .08);
 }
 
-table{
+table {
   width: 100%;
-  min-width: 1300px;
+  min-width: 1450px;
   border-collapse: collapse;
+  background: #fff;
 }
 
-thead tr{
+thead {
   background: #0d6efd;
 }
 
-table th{
-  color: white;
+thead th {
+  background: #0d6efd;
+  color: #fff !important;
   padding: 16px;
   font-size: 15px;
   font-weight: 600;
-    color: black;
-
   white-space: nowrap;
+  text-align: center;
 }
 
-table td{
+tbody td {
   padding: 15px;
   border-bottom: 1px solid #ececec;
   text-align: center;
   white-space: nowrap;
   font-size: 14px;
-    color: black;
-
+  background: #fff;
+  color: #222 !important;
 }
 
-tbody tr{
-  transition: .25s;
-    color: black;
-
-}
-
-tbody tr:nth-child(even){
+tbody tr:nth-child(even) td {
   background: #fafafa;
-  color: black;
 }
 
-tbody tr:hover{
+tbody tr:hover td {
   background: #eef5ff;
-  color: black;
-
+  color: #222 !important;
 }
 
-.pnr{
-  color: #e63946;
+.pnr {
+  color: #e63946 !important;
   font-weight: bold;
   text-transform: uppercase;
 }
 
-.createdBy{
-  color: black;
+.createdBy {
+  color: #000 !important;
   font-weight: bold;
   text-transform: uppercase;
 }
 
-.delete-ticket{
+.delete-ticket {
   width: 38px;
   height: 38px;
   border: none;
   border-radius: 8px;
+  background: #f6f6f6;
   color: #d90429;
   font-size: 18px;
-  font-weight: bold;
   cursor: pointer;
   transition: .3s;
-  
 }
 
-.delete-ticket:hover{
+.delete-ticket:hover {
   background: #d90429;
-  color: white;
+  color: #fff;
   transform: scale(1.05);
 }
 
-.summary{
+.summary {
   margin-top: 30px;
   display: flex;
-  justify-content: space-between;
   gap: 20px;
   flex-wrap: wrap;
 }
 
-.summary h3{
+.summary h3 {
   flex: 1;
-  min-width: 250px;
-  background: white;
+  min-width: 260px;
+  background: #fff;
   padding: 20px;
   border-radius: 12px;
   text-align: center;
@@ -132,7 +123,7 @@ tbody tr:hover{
   }
 
   table{
-    min-width:1200px;
+    min-width:1300px;
   }
 
   .summary h3{
@@ -149,21 +140,20 @@ tbody tr:hover{
 
   .tickets-container h2{
     font-size:24px;
-    margin-bottom:18px;
   }
 
   table{
-    min-width:1100px;
+    min-width:1200px;
   }
 
-  table th,
-  table td{
+  thead th,
+  tbody td{
     padding:12px;
     font-size:13px;
   }
 
   .summary{
-    flex-direction: column;
+    flex-direction:column;
   }
 
   .summary h3{
@@ -179,8 +169,8 @@ tbody tr:hover{
     font-size:22px;
   }
 
-  table th,
-  table td{
+  thead th,
+  tbody td{
     font-size:12px;
     padding:10px;
   }
