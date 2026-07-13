@@ -45,13 +45,24 @@ export default function MyTickets() {
 
   return (
     <div className="tickets-container">
-      <h2>My Tickets</h2>
+  <div className="tickets-header">
+  <div>
+    <h2 className="tickets-title">My Tickets</h2>
+    <p className="tickets-user">
+      Welcome,
+      <span>{localStorage.getItem("username")}</span>
+    </p>
+  </div>
+
+  <div className="tickets-count">
+    {tickets.length} Tickets
+  </div>
+</div>
 
       <div className="table-responsive">
         <table>
           <thead>
             <tr>
-              <th>Created By</th>
               <th>PNR</th>
               <th>Customer</th>
               <th>Type</th>
@@ -76,7 +87,6 @@ export default function MyTickets() {
           <tbody>
             {tickets.map((ticket) => (
               <tr key={ticket._id}>
-                <td className="createdBy">{ticket.user.name}</td>
                 <td className="pnr">{ticket.pnr}</td>
 
                 <td>{ticket.customerName}</td>

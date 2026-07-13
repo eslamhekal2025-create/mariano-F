@@ -30,7 +30,10 @@ localStorage.setItem(
 "userId",
 data.user.id
 );
-
+localStorage.setItem(
+"username",
+data.user.name
+);
 
 
 window.dispatchEvent(

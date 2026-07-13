@@ -15,6 +15,68 @@
   color: #222;
 }
 
+
+.tickets-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:30px;
+    padding:20px 25px;
+    background:#fff;
+    border-radius:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.tickets-title{
+    font-size:32px;
+    color:#1f2c33;
+    margin:0;
+    font-weight:700;
+}
+
+.tickets-user{
+    margin-top:8px;
+    color:#666;
+    font-size:16px;
+}
+
+.tickets-user span{
+    color:#F05A28;
+    font-weight:700;
+    margin-left:6px;
+}
+
+.tickets-count{
+    background:#F05A28;
+    color:#fff;
+    padding:12px 20px;
+    border-radius:50px;
+    font-weight:700;
+    font-size:16px;
+    min-width:120px;
+    text-align:center;
+}
+
+@media(max-width:768px){
+
+.tickets-header{
+    flex-direction:column;
+    gap:20px;
+    text-align:center;
+}
+
+.tickets-title{
+    font-size:26px;
+}
+.tickets-user span{
+      text-transform: capitalize;
+
+}
+.tickets-count{
+    width:100%;
+}
+
+}
 .table-responsive {
   width: 100%;
   overflow-x: auto;
