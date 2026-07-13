@@ -51,7 +51,6 @@ tbody td {
   white-space: nowrap;
   font-size: 14px;
   background: #fff;
-  color: #222 !important;
 }
 
 tbody tr:nth-child(even) td {
