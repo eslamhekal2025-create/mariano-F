@@ -70,7 +70,7 @@ tbody tr:hover td {
 }
 
 .createdBy {
-  color: #000 !important;
+  color: green !important;
   font-weight: bold;
   text-transform: uppercase;
 }
