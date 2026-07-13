@@ -20,7 +20,7 @@ import {
   FaPlusCircle
 } from "react-icons/fa";
 
-import "./Navbar.css";
+import "./navbar.css";
 
 
 export default function Navbar() {
